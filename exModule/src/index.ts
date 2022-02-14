@@ -1,4 +1,9 @@
-import {IPerson, makePerson} from './utils/exModule'
+import {IPerson, makePerson} from './utils/exModule';
+import { IVariable, printVariable } from './utils/exVariable';
+
+const testVariable = (): void => {
+    printVariable(1,true,"hello",{string:"h", number:1});
+}
 
 const testMakePerson = (): void => {
     let jane: IPerson = makePerson('Jane');
@@ -6,5 +11,7 @@ const testMakePerson = (): void => {
 
     console.log(jane, jack);
 }
+
+testVariable();
 
 testMakePerson();
