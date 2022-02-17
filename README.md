@@ -34,3 +34,9 @@
 9. git commit -m "내용 입력"
 10. git push origin master
 11. 연습 시작
+
+
+## Reference 
+1. https://www.typescriptlang.org/docs/handbook/intro.html
+2. Do it! 타입스크립트 프로그래밍
+
