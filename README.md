@@ -5,6 +5,8 @@
 
 ## exFirstclass
 1. 일급함수(first-class function) callback 사용
+2. Destructuring (비구조화 할당) 사용
+3. rest operator (잔여연산자) / spread operator (전개연산자) 사용
 
 ## exModule
 1. 모듈 import / export 하는 방법 연습
