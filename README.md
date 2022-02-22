@@ -24,16 +24,17 @@
    *  script 에 아래 내용 추가
       -  "dev": "ts-node src",
       -  "build": "tsc && node dist",
-4. tsconfig.json 수정
+4. tsc --init 으로 tsconfig.json 생성
+5. tsconfig.json 수정
    * outDir 을 주석 해제하고 dist 입력
    * sourceMap 주석 해제하고 true 값 입력 > 디버깅 용
-5. mkdir -p src/utils
-6. src 아래에 index.ts 생성
-7. src/utils 아래에 원하는 모듈 생성
-8. git add .
-9. git commit -m "내용 입력"
-10. git push origin master
-11. 연습 시작
+6. mkdir -p src/utils
+7. src 아래에 index.ts 생성
+8. src/utils 아래에 원하는 모듈 생성
+9. git add .
+10. git commit -m "내용 입력"
+11. git push origin master
+12. 연습 시작
 
 
 ## Reference 
