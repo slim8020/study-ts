@@ -50,9 +50,31 @@ console.log(identity<boolean>(true), identity<number>(3), identity(5));
 
 console.log(ex.range(25, 30+7));
 
-let numbers: number[] = ex.range(1, 7);
+
+let numbers: number[] = ex.range(1, 100+1);
 let result = ex.fold(numbers, (result, value) => result + value, 0);
 console.log(result);
+
+const isOdd = (n:number):boolean => n % 2 != 0;
+const isEven = (n:number):boolean => n % 2 === 0;
+
+
+let result1 = ex.fold(ex.filter(numbers, isOdd),(result, value)=>result+value, 0);
+let result2 = ex.fold(ex.filter(numbers, isEven),(result, value)=> result+value, 0);
+let result3 = ex.fold(ex.map(numbers,value => value * value),(result, value)=> result + value, 0);
+
+console.log(`홀수 합: ${result1}`);
+console.log(`짝수 합: ${result2}`);
+console.log(`2제곱 합: ${result3}`);
+
+const arr:number[] = ex.range(1, 10+1);
+
+let odds: number[] = arr.filter((value) => value % 2 != 0);
+
+console.log(odds);
+
+
+
 
 
 

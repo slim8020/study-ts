@@ -30,9 +30,35 @@ export const range = (from: number, to:number):number[] =>
 
 export const fold = <T>(array: T[], callback: (result: T, val: T) => T, initValue:T) =>{
     let result: T = initValue;
-    for(let i=0; i< array.length; ++i){
+
+    for( let i in array )
+    {
         const value = array[i];
         result = callback(result, value);
     }
+    // for(let i=0; i< array.length; ++i){
+    //     const value = array[i];
+    //     result = callback(result, value);
+    // }
+    return result;
+}
+
+export const filter = <T>(array: T[], callback: (value:T, index?: number) => boolean) : T[] => {
+    let result: T[] =[];
+    for(let index:number =0; index < array.length; ++index){
+        const value = array[index];
+        if(callback(value, index))
+            result = [...result, value];
+    }
+    return result;
+}
+
+export const map = <T, Q>(array: T[], callback: (value: T, index?: number) => Q): Q[] =>{
+    let result: Q[] = [];
+    for(let index = 0; index < array.length; ++index){
+        const value = array[index];
+        result = [...result, callback(value, index)];
+    }
+
     return result;
 }
