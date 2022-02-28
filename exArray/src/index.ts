@@ -1,6 +1,7 @@
 import * as ex from './utils/exArrary';
 import {calculator, A} from './utils/exMethod';
 import { factorial, oldFactorial } from './utils/exFactorial';
+import { doSomething } from './utils/exTupple';
 
 // ex.print();
 
@@ -94,3 +95,6 @@ console.log(result);
 console.log(`new version : ${factorial(5)}`);
 console.log(`old version : ${oldFactorial(5)}`);
 
+const [res, errorMessage] = doSomething();
+
+console.log(res, errorMessage);
