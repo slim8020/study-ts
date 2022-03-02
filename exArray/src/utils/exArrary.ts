@@ -62,3 +62,8 @@ export const map = <T, Q>(array: T[], callback: (value: T, index?: number) => Q)
 
     return result;
 }
+
+export const pureSort = <T>(array: readonly T[]):T[] =>{
+    let deepCopied = [...array];
+    return deepCopied.sort();
+}

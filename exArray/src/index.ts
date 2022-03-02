@@ -1,5 +1,5 @@
 import * as ex from './utils/exArrary';
-import {calculator, A} from './utils/exMethod';
+import {calculator, A, deepcopy, shadowcopy, spreadDeep} from './utils/exMethod';
 import { factorial, oldFactorial } from './utils/exFactorial';
 
 // ex.print();
@@ -94,3 +94,13 @@ console.log(result);
 console.log(`new version : ${factorial(5)}`);
 console.log(`old version : ${oldFactorial(5)}`);
 
+
+deepcopy(1);
+
+shadowcopy([1,2,3]);
+
+spreadDeep([1,2,3]);
+
+let originalArray = [6,2,4,1,5,9];
+const distArray = ex.pureSort(originalArray);
+console.log(originalArray, distArray);
